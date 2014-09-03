@@ -837,7 +837,7 @@ with "location" replaced by the location of the file docbookx.dtd.
 
 <target name="version" depends="version-check-uptodate"
  unless="version-uptodate">
-<copy file="src/net/sf/gogui/version/Version.java.in"
+<copy file="src/net/sf/gogui/version/Version.java"
       tofile="src/net/sf/gogui/version/Version.java" overwrite="true"
       filtering="true"/>
 <copy file="doc/manual/xml/version.xml.in"
