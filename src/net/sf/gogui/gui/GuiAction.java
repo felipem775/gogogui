@@ -39,7 +39,10 @@ public abstract class GuiAction
     {
         this(name, desc, null, 0, icon);
     }
-
+    public GuiAction(String name, String desc, int accel, String icon, Boolean shortcut)
+    {
+        this(name, desc, accel, 0, icon);
+    }
     public GuiAction(String name, String desc, int accel, String icon)
     {
         this(name, desc, accel, SHORTCUT, icon);

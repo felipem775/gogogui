@@ -46,14 +46,14 @@ public class GoGuiActions
 
     public final GuiAction m_actionBackward =
         new GuiAction(i18n("ACT_BACKWARD"), i18n("TT_BACKWARD"),
-                   KeyEvent.VK_LEFT, "gogui-previous") {
+                   KeyEvent.VK_A, "gogui-previous", Boolean.FALSE) {
             public void actionPerformed(ActionEvent e) {
                 m_goGui.actionBackward(1); } };
 
     public final GuiAction m_actionBackwardTen =
         new GuiAction(i18n("ACT_BACKWARD_TEN"), i18n("TT_BACKWARD_TEN"),
-                   KeyEvent.VK_LEFT,
-                   SHORTCUT | ActionEvent.SHIFT_MASK, "gogui-previous-10") {
+                   KeyEvent.VK_A,
+                   0 | ActionEvent.SHIFT_MASK, "gogui-previous-10") {
             public void actionPerformed(ActionEvent e) {
                 m_goGui.actionBackward(10); } };
 
@@ -218,13 +218,13 @@ public class GoGuiActions
 
     public final GuiAction m_actionForward =
         new GuiAction(i18n("ACT_FORWARD"), i18n("TT_FORWARD"),
-                      KeyEvent.VK_RIGHT, "gogui-next") {
+                      KeyEvent.VK_D, "gogui-next", Boolean.FALSE) {
             public void actionPerformed(ActionEvent e) {
                 m_goGui.actionForward(1); } };
 
     public final GuiAction m_actionForwardTen =
         new GuiAction(i18n("ACT_FORWARD_TEN"), i18n("TT_FORWARD_TEN"),
-                      KeyEvent.VK_RIGHT, SHORTCUT | ActionEvent.SHIFT_MASK,
+                      KeyEvent.VK_D, 0 | ActionEvent.SHIFT_MASK,
                       "gogui-next-10") {
             public void actionPerformed(ActionEvent e) {
                 m_goGui.actionForward(10); } };
@@ -330,13 +330,13 @@ public class GoGuiActions
 
     public final GuiAction m_actionNextEarlierVariation =
         new GuiAction(i18n("ACT_NEXT_EARLIER_VARIATION"), null,
-                   KeyEvent.VK_DOWN, SHORTCUT | ActionEvent.SHIFT_MASK) {
+                   KeyEvent.VK_S, SHORTCUT | ActionEvent.SHIFT_MASK) {
             public void actionPerformed(ActionEvent e) {
                 m_goGui.actionNextEarlierVariation(); } };
 
     public final GuiAction m_actionNextVariation =
         new GuiAction(i18n("ACT_NEXT_VARIATION"), i18n("TT_NEXT_VARIATION"),
-                      KeyEvent.VK_DOWN, "gogui-down") {
+                      KeyEvent.VK_S, "gogui-down") {
             public void actionPerformed(ActionEvent e) {
                 m_goGui.actionNextVariation(); } };
 
@@ -397,14 +397,14 @@ public class GoGuiActions
 
     public final GuiAction m_actionPreviousEarlierVariation =
         new GuiAction(i18n("ACT_PREVIOUS_EARLIER_VARIATION"), null,
-                   KeyEvent.VK_UP, SHORTCUT | ActionEvent.SHIFT_MASK) {
+                   KeyEvent.VK_W, SHORTCUT | ActionEvent.SHIFT_MASK) {
             public void actionPerformed(ActionEvent e) {
                 m_goGui.actionPreviousEarlierVariation(); } };
 
     public final GuiAction m_actionPreviousVariation =
         new GuiAction(i18n("ACT_PREVIOUS_VARIATION"),
                       i18n("TT_PREVIOUS_VARIATION"),
-                      KeyEvent.VK_UP, "gogui-up") {
+                      KeyEvent.VK_W, "gogui-up") {
             public void actionPerformed(ActionEvent e) {
                 m_goGui.actionPreviousVariation(); } };
 
